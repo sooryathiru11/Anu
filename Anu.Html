@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Something for You 💜</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #170d29;
+    color: white;
+    overflow-x: hidden;
+}
+
+.call-memory {
+    background: rgba(52, 25, 75, 0.55);
+    border: 1px solid rgba(255,220,255,0.5);
+    border-radius: 25px;
+    padding: 28px;
+    margin: 25px auto;
+    box-shadow: 0 0 30px rgba(220,150,255,0.3);
+    backdrop-filter: blur(8px);
+}
+
+.call-name {
+    font-size: clamp(30px, 7vw, 48px);
+    color: #ffe1ff;
+    text-shadow: 0 0 20px #e4a0ff;
+    animation: heartbeat 2s infinite;
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 75px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg,#170d29,#392054,#654080);
+}
+
+.content {
+    max-width: 750px;
+    z-index: 2;
+}
+
+h1 {
+    font-size: clamp(35px,7vw,65px);
+    color: #f6d9ff;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px #d58bff;
+}
+
+h2 {
+    font-size: clamp(27px,5vw,42px);
+    color: #f4cfff;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #f3e8ff;
+    margin-bottom: 20px;
+}
+
+button {
+    border: 1px solid #f2c5ff;
+    background: linear-gradient(90deg,#a65bd1,#e0a5ff);
+    color: #291037;
+    padding: 16px 35px;
+    font-size: 17px;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 25px #c47be9;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.heart {
+    font-size: 90px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.2); }
+}
+
+.initials {
+    position: absolute;
+    font-size: 180px;
+    color: rgba(255,255,255,.045);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.initials.left {
+    top: 10%;
+    left: 4%;
+}
+
+.initials.right {
+    bottom: 10%;
+    right: 4%;
+}
+
+.photo {
+    width: min(85%,350px);
+    max-height: 400px;
+    object-fit: cover;
+    border: 3px solid #edc3ff;
+    border-radius: 22px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 0 0 30px #b76bdd;
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 30px auto;
+}
+
+.split img {
+    width: 43%;
+    max-width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #e3aaff;
+}
+
+.glow {
+    color: #ffcafa;
+    text-shadow: 0 0 15px #ed8fff;
+}
+
+.small {
+    font-size: 15px;
+    opacity: .8;
+}
+
+.butterfly {
+    position: fixed;
+    z-index: 10;
+    top: 110%;
+    font-size: 30px;
+    pointer-events: none;
+    animation: fly 6s linear forwards;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(0,0) rotate(0deg);
+        opacity: 0;
+    }
+    15% { opacity: 1; }
+    100% {
+        transform: translate(var(--move),-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#mainContent {
+    display: none;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #170d29;
+    color: #dcb5f5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING PAGE -->
+<section id="welcome">
+    <div class="initials left">S</div>
+    <div class="initials right">A</div>
+
+    <div class="content">
+        <div class="heart">💜</div>
+        <h1>A Little Something for You</h1>
+        <p>
+            Sometimes, the most beautiful connections
+            begin with the most unexpected messages.
+        </p>
+        <p class="glow">One random DM. One beautiful friendship. One special week.</p>
+        <button onclick="openGift()">Click to Open 💌</button>
+        <p class="small" style="margin-top:25px">Made with a little love and lots of feelings.</p>
+    </div>
+</section>
+
+<div id="mainContent">
+
+<!-- PAGE 2 -->
+<section>
+    <div class="initials left">S</div>
+    <div class="initials right">A</div>
+
+    <div class="content">
+        <h2>Who Knew? 🦋</h2>
+        <div class="heart">💜</div>
+        <p>
+            One random day, a girl I had never met
+            sent me a message on Instagram.
+        </p>
+        <p>
+            I never imagined that a simple notification
+            would turn into someone I would look forward
+            to talking to every single day.
+        </p>
+        <p class="glow">
+            You started as a stranger, but somehow
+            became one of my favourite people.
+        </p>
+    </div>
+</section>
+
+<!-- PAGE 3 -->
+<section>
+    <div class="initials left">S</div>
+    <div class="initials right">A</div>
+
+    <div class="content">
+        <h2>One Week, Countless Smiles 💫</h2>
+        <p>
+            It's only been a week, but some connections
+            don't need years to become meaningful.
+        </p>
+        <p>
+            Your random messages, silly conversations,
+            unexpected laughter and little moments
+            have made this week feel so special.
+        </p>
+        <p>
+            You became a part of my everyday life
+            without even trying.
+        </p>
+        <h2 class="glow">And honestly, I'm glad you did. 💜</h2>
+    </div>
+</section>
+
+<!-- SPECIAL PHONE CALL MEMORY -->
+<section>
+    <div class="initials left">S</div>
+    <div class="initials right">A</div>
+
+    <div class="content">
+        <h2>One Little Word, A Million Smiles ☎️</h2>
+
+        <div class="call-memory">
+            <p>There is something you do without even realising...</p>
+
+            <h1 class="call-name">Soooooryyaaaah! 💜</h1>
+
+            <p>
+                Sometimes, when we talk on the phone,
+                you call my name like that.
+            </p>
+
+            <p>
+                You probably think it's just an ordinary
+                way of calling me.
+            </p>
+
+            <p>
+                But honestly, every time I hear you say
+                "Soooooryyaaaah", it makes me smile
+                in a way I cannot explain.
+            </p>
+
+            <p>
+                I don't know why such a tiny little thing
+                makes me this happy.
+            </p>
+
+            <h2 class="glow">
+                Maybe it's not just the way you say my name...
+                It's the fact that it's YOU saying it. 🦋
+            </h2>
+        </div>
+    </div>
+</section>
+
+
+<!-- PAGE 4 -->
+<section>
+    <div class="initials left">S</div>
+    <div class="initials right">A</div>
+
+    <div class="content">
+        <h2>My First Emotional Gift 🎁</h2>
+
+        <img src="gift.png" class="photo"
+             alt="The special gift you gave me">
+
+        <p>
+            You might think it's just a gift you ordered
+            from Blinki LT.
+        </p>
+
+        <p>
+            But to me, it means so much more.
+            It is the first emotional gift I have received
+            from someone who became special to me
+            in such an unexpected way.
+        </p>
+
+        <p class="glow">
+            I'll remember not just the gift,
+            but the person behind it.
+        </p>
+
+        <p>
+            Thank you for making me feel special.
+            You have no idea how much this means to me. 💜
+        </p>
+    </div>
+</section>
+
+<!-- PAGE 5 -->
+<section>
+    <div class="initials left">S</div>
+    <div class="initials right">A</div>
+
+    <div class="content">
+        <h2>Two Halves, One Beautiful Bond 💜</h2>
+
+        <div class="split">
+            <img src="love.png" alt="Our half heart">
+        </div>
+
+        <p>
+            Two different people, two different lives,
+            and one unexpected connection.
+        </p>
+
+        <p>
+            I don't know what the future holds,
+            but I genuinely hope this friendship
+            stays as beautiful as it is today.
+        </p>
+
+        <h1>Happy 1 Week Friendship Anniversary! 🦋</h1>
+
+        <p>
+            Thank you for entering my life.
+            Thank you for the smiles.
+            Thank you for being you.
+        </p>
+
+        <p class="glow">
+            Some people arrive unexpectedly
+            and make ordinary days feel extraordinary.
+            You're one of those people.
+        </p>
+
+        <div class="heart">💜</div>
+
+        <h2>From Soorya to My Baby Anuuuuuuu 🫶</h2>
+        <p>One week down, hopefully countless memories ahead.</p>
+        <p class="small">A little website, for a person who became a big part of my little world.</p>
+    </div>
+</section>
+
+<footer>
+    Made with 💜 just for you.
+    <br>Our little story deserves its own little website.
+</footer>
+
+</div>
+
+<script>
+function openGift() {
+
+    document.getElementById("welcome").style.display = "none";
+
+    document.getElementById("mainContent").style.display = "block";
+
+    window.scrollTo(0,0);
+
+    // Magical butterfly entrance
+    for(let i = 0; i < 35; i++) {
+        setTimeout(() => {
+            let butterfly = document.createElement("div");
+            butterfly.className = "butterfly";
+            butterfly.innerHTML = ["🦋","✨","💜"][Math.floor(Math.random()*3)];
+
+            butterfly.style.left = Math.random()*100 + "vw";
+            butterfly.style.setProperty(
+                "--move",
+                (Math.random()*200-100) + "px"
+            );
+
+            document.body.appendChild(butterfly);
+
+            setTimeout(() => butterfly.remove(),6000);
+
+        },i*120);
+    }
+}
+</script>
+
+</body>
+</html>
